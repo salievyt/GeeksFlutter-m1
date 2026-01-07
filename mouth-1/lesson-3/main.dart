@@ -67,4 +67,23 @@ void main(List<String> args) {
 
   print('---------------------');
 
+
+  for (var i = 0; i < 10; i++) {
+    if (i == 5){
+      continue;
+    }
+    print(i);
+  }
+
+  print('---------------------');
+
+  int index = 0;
+    while (true){
+      index++;
+      print(index);
+      if (index == 666){
+        break;
+      }
+    }
+
 }
