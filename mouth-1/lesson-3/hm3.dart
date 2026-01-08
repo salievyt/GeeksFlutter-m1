@@ -1,10 +1,14 @@
 void main(List<String> args) {
-  List<int> nums = [1,32,7,77,34,45,32,53,75,44,2,37,22];
+  List<int> nums = [1,32,33,77,34,45,32,453,75,44,2,37,22];
   for (var i in nums) {
+
     if (i > 0 && i < 10){
       continue;
     }
     print(i);
+    if (i > 100){
+      break;
+    }
   }
 
   print('---------------');
