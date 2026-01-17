@@ -10,6 +10,7 @@ void main(List<String> args) {
   dog.eat();
   cat.eat();
   print(cat);
+  print(animals);
   
 }
 

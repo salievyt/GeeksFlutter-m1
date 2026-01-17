@@ -1,4 +1,4 @@
-import '../colors.dart';
+
 import 'shape.dart';
 
 class Triandle extends Shape{
