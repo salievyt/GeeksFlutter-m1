@@ -1,0 +1,4 @@
+class Animal {
+  makeSound(){}
+  eat(){}
+}
