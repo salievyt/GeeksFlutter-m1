@@ -1,12 +1,16 @@
 import 'animal.dart';
+import 'patinfo.dart';
 
-class Dog implements Animal{
+class Dog extends Animal {
+  Dog(PetInfo petInfo) : super(petInfo);
+
   @override
-  eat() {
+  void makeSound() {
+    print('${petInfo.name}: Гав гав');
   }
 
   @override
-  makeSound() {
+  void eat() {
+    print('${petInfo.name} жует косточку');
   }
-
 }

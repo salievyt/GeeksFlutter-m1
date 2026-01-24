@@ -1,43 +1,25 @@
-import 'dart:developer';
-
+import 'animal/animal.dart';
 import 'animal/cat.dart';
-import 'gudget/loptop.dart';
-import 'gudget/phone.dart';
-import 'gudget/tech.dart';
-import 'shape/circle.dart';
-import 'shape/rectangle.dart';
-import 'shape/shape.dart';
+import 'animal/dog.dart';
+import 'animal/patinfo.dart';
 
 void main(List<String> args) {
-    Cat cat = Cat();
-    cat.makeSound();
+  List<Animal> animals = [
+    Dog(PetInfo('Рекс', 3)),
+    Cat(PetInfo('Барсик', 2)),
+    Dog(PetInfo('Шарик', 5)),
+    Cat(PetInfo('Мурка', 1)),
+  ];
 
-    Shape shape = Rectangle();
-    if (shape is Rectangle){
-        print("квадрат");
-    }else if (shape is Circle){
-        print("круг");
-    }
+  for (Animal animal in animals) {
+    animal.introduce();
+  }
 
-    List<Tech> gadgets = [
-        Loptop(),
-        Loptop(),
-        Loptop(),
-        Phone(),
-        Phone(),
-        Phone()
-    ];
-    int summaLopTop = 0;
-    int summaPhone = 0;
-    for (var gadget in gadgets) {
-     if (gadget is Loptop){
-        summaLopTop += gadget.price.toInt();
-     }
-     if (gadget is Phone){
-        summaPhone += gadget.price.toInt();
-     }
-      
-    }
-    print("Сумма ноутов: ${summaLopTop}");
-    print("Сумма телефонов: ${summaPhone}");
+
+  for (Animal animal in animals) {
+    animal.makeSound();
+  }
+  for (Animal animal in animals) {
+    animal.eat();
+  }
 }
